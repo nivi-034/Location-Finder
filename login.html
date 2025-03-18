@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body, html {
+      height: 100%;
+    }
+    body {
+      background: url('https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2022/04/a4e99-blog-3-min.jpg?fit=5073%2C3382&ssl=1') 
+                  no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Login Container */
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 320px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #fff;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      backdrop-filter: blur(5px);
+    }
+    .login-container input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .login-container input:focus {
+      border-color: #007BFF;
+      box-shadow: 0 0 5px rgba(0,123,255,0.5);
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #007BFF;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+    .login-container p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: white;
+    }
+    .login-container a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      
+      // Basic validation: check if both fields are filled
+      if (username && password) {
+        // Redirect to the next page (e.g., index.html)
+        window.location.href = "index.html";
+      } else {
+        alert("Please enter both username and password");
+      }
+    });
+  </script>
+</body>
+</html>

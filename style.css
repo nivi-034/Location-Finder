@@ -1,0 +1,8 @@
+#map {
+    width: 100%;
+    height: 500px;
+}
+body {
+    background: url('https://img.freepik.com/free-vector/pink-silk-background_1048-401.jpg?t=st=1740542739~exp=1740546339~hmac=d56480a8d14943841432b3ccb83472467ed37a6bc13603edf57a11215c1b3626&w=900') no-repeat center center fixed;
+    background-size: cover;
+}
